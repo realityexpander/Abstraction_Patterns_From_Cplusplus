@@ -15,6 +15,7 @@ fun add2(a: Int, b: Int, c: Int): Int {
 	return a + b + c
 }
 
+
 fun example9_0_BadStyle() {
 
 	// Two similar functions, used in the same way.
@@ -22,7 +23,10 @@ fun example9_0_BadStyle() {
 	println(add2(1, 2, 3))
 }
 
-// ?? Better (But still "Class Oriented Programming")
+
+
+
+// 🙂 Better - COP Style (But still "Class Oriented Programming")
 // - Create an `base` class with the common function. Extend the class if you need specific functionality.
 open class Adder {
 	open fun add(a: Int, b: Int, c: Int): Int {
@@ -62,7 +66,8 @@ fun example9_1_BetterCOPStyle() {
 
 
 
-// ❤️ Best BOOP Style (Back-to Object Oriented Programming)
+
+// ❤️ Best - BOOP Style (Back-to Object Oriented Programming)
 // - Use interfaces to define common functionality.
 
 interface CanSum {
@@ -98,16 +103,15 @@ class SimpleSum(
 	}
 }
 
-
 fun example9_2_BestBOOPStyle() {
-
-	// The `FancySum` class uses the common interface `CanSum` implementation.
-	val fancySum = FancySum(1, 2, 3)
-	println(fancySum.result())
 
 	// The `SimpleSum` class uses the common interface `CanSum` implementation.
 	val simpleSum = SimpleSum(1, 2)
 	println(simpleSum.result())
+
+	// The `FancySum` class uses the common interface `CanSum` implementation.
+	val fancySum = FancySum(1, 2, 3)
+	println(fancySum.result())
 }
 
 
