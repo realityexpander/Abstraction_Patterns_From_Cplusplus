@@ -11,16 +11,16 @@ fun sum(a: Int, b: Int): Int {
 	return a + b
 }
 
-fun add2(a: Int, b: Int, c: Int): Int {
+fun add3(a: Int, b: Int, c: Int): Int {
 	return a + b + c
 }
 
 
 fun example9_0_BadStyle() {
-
 	// Two similar functions, used in the same way.
 	println(sum(1, 2))
-	println(add2(1, 2, 3))
+
+	println(add3(1, 2, 3))
 }
 
 
@@ -28,6 +28,7 @@ fun example9_0_BadStyle() {
 
 // 🙂 Better - COP Style (But still "Class Oriented Programming")
 // - Create an `base` class with the common function. Extend the class if you need specific functionality.
+// - The `class` is simply a container for the function, and it encapsulates no data. This is COP style.
 open class Adder {
 	open fun add(a: Int, b: Int, c: Int): Int {
 		return a + b
@@ -36,13 +37,13 @@ open class Adder {
 
 class FancyAdder : Adder() {
 	override fun add(a: Int, b: Int, c: Int): Int {
-		return a + b + c
+		return super.add(a, b, c)  // uses the common base class `Adder` implementation.
 	}
 }
 
 open class SimpleAdder : Adder() {
 	open fun add(a: Int, b: Int): Int {
-		return super.add(a, b, 0)
+		return super.add(a, b, 0)  // uses the common base class `Adder` implementation.
 	}
 }
 
@@ -69,6 +70,8 @@ fun example9_1_BetterCOPStyle() {
 
 // ❤️ Best - BOOP Style (Back-to Object Oriented Programming)
 // - Use interfaces to define common functionality.
+// - Calculations are done lazily.
+// - Data is encapsulated in the class, and not passed around like in the COP style.
 
 interface CanSum {
 	fun sum(a: Int, b: Int, c: Int): Int { // Kotlin allows for default implementations.
@@ -76,27 +79,26 @@ interface CanSum {
 	}
 }
 
-interface HasNumberResult {
-	fun result(): Int  // Anyone implementing this interface must provide a numerical result.
+interface HasIntegerResult {
+	fun result(): Int  // Anyone implementing this interface must provide an integer result.
 }
 
 // - Create a class that implements the interface.
 class FancySum(
-	val a: Int,
-	val b: Int,
-	val c: Int
-) : CanSum, HasNumberResult {
+	private val a: Int,
+	private val b: Int,
+	private val c: Int
+) : CanSum, HasIntegerResult {
 
 	override fun result(): Int {
 		return sum(a, b, c)
 	}
-
 }
 
 class SimpleSum(
 	val a: Int,
 	val b: Int
-) : CanSum, HasNumberResult {
+) : CanSum, HasIntegerResult {
 
 	override fun result(): Int {
 		return sum(a, b, 0)
