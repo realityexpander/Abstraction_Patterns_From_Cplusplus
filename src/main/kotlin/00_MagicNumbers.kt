@@ -3,6 +3,8 @@
 import kotlin.time.Duration.Companion.days
 import kotlin.time.Duration.Companion.seconds
 
+const val pi = 3.1415926
+
 // 🟠 Example 0 - Magic Numbers
 fun example00_0_magicNumbers() {
 
@@ -12,7 +14,6 @@ fun example00_0_magicNumbers() {
 	val area = 3.14 * 5 * 5
 
 	// 🙂 After
-	val pi = 3.14
 	val radius = 5
 	val area2 = pi * radius * radius
 }
