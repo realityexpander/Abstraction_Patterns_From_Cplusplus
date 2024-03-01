@@ -9,7 +9,7 @@
 const val RTB = 1000  // Basic report
 const val RTC = 2001  // customer-requested report
 const val RTBC = 2002  // customer-requested, for a big customer
-//const val RTCC = 2003  // customer-requested, for a cheap customer  // what happens to the `else` branch?
+//const val RTCC = 2003 // customer-requested, for a cheap customer  // What happens to the `else` branch?
 
 
 
