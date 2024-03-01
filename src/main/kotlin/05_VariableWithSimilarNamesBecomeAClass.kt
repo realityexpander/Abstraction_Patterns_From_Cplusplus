@@ -59,7 +59,7 @@ data class DataPoint(
 	var tolerance: Double,
 )
 
-data class Location(
+data class Position(
 	var lat: Double,
 	var lon: Double,
 	var isVisible: Boolean,
@@ -68,7 +68,7 @@ data class Location(
 
 fun example5_3_BetterStyle() {
 	val dataPoint = DataPoint(0, 100, 10, 50.0, 0.1)
-	val location = Location(37.7749, 122.4194, isVisible=true, isSecure=true)
+	val position = Position(37.7749, 122.4194, isVisible=true, isSecure=true)
 
 	// ... more code
 }
