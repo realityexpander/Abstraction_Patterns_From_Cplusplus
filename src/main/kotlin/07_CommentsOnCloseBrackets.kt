@@ -2,9 +2,10 @@
 // 🟠 Example 7 - Comments On The Closing Brace
 // - If you have a function becoming larger than a screenful, consider breaking it up into smaller functions.
 
+
 // 😕 Before
 // - Functions that are larger than a screenful are hard to understand and maintain.
-fun example7_0_BadStyle() {
+fun example07_0_BadStyle() {
 	val x = 100
 	val y = 200
 	val z = 300
@@ -59,23 +60,9 @@ fun example7_0_BadStyle() {
 }
 
 
+
 // 🙂 Better
 // - Break the function into smaller functions.
-fun example7_1_GoodStyle() {
-	val x = 100
-	val y = 200
-	val z = 300
-	val xyz = true
-
-	val d = prepareCalculation(x, y, z, xyz)
-	println("Preparation complete: $d")
-
-	val xx = 100
-	val yy = 200
-	val zz = 300
-	val dd = importData(xx, yy, zz, xyz)
-	println("Data imported: $dd")
-}
 
 fun prepareCalculation(x: Int, y: Int, z: Int, xyz: Boolean): Int {
 	if(xyz) {
@@ -135,8 +122,28 @@ fun importData(xx: Int, yy: Int, zz: Int, xyz: Boolean): Int {
 	return 0
 }
 
+fun example07_1_BetterStyle() {
+	val x = 100
+	val y = 200
+	val z = 300
+	val xyz = true
 
-// 🙂 Better
-// - Hide complexity behind classes.
+	val d = prepareCalculation(x, y, z, xyz)
+	println("Preparation complete: $d")
+
+	val xx = 100
+	val yy = 200
+	val zz = 300
+	val dd = importData(xx, yy, zz, xyz)
+	println("Data imported: $dd")
+}
+
+
+fun main() {
+	example07_0_BadStyle()
+	println() // Add a blank line
+
+	example07_1_BetterStyle()
+}
 
 

@@ -2,6 +2,7 @@
 // 🟠 Example 2 - Many Parameters become a Data Class
 // - If you have a function with many parameters, consider grouping them into a data class.
 
+// Define a `Person` class with many parameters.
 data class Person(
 	var name: String,
 	var age: Int,
@@ -12,6 +13,7 @@ data class Person(
 	var country: String
 )
 
+// Create a `Person` object.
 var person = Person(
 	"John Doe",
 	30,
@@ -21,6 +23,10 @@ var person = Person(
 	"12345",
 	"USA"
 )
+
+
+// 😕 Before
+// - Note all the parameters, and the Kotlin compiler is complaining about calling with unnamed parameters.
 
 fun updatePerson(
 	person: Person,
@@ -53,13 +59,14 @@ fun updatePerson(
 	}
 }
 
-// 😕 Before
-// - Note all the parameters, and the Kotlin compiler is complaining about calling with unnamed parameters.
-fun example2_0_BadStyle() {
+fun example02_0_BadStyle() {
 	updatePerson(person, true, false, false, false, false, false, "Jane Doe")
 
 	println(person)
 }
+
+
+
 
 // 😐 A little better - use a data class for the parameters.
 data class PersonUpdate(
@@ -98,14 +105,17 @@ fun updatePerson2(
 	}
 }
 
-fun example2_1_ALittleBetter() {
+fun example02_1_ALittleBetter() {
 	val personUpdate = PersonUpdate(true, false, false, false, false, false, "Jane Doe", 0)
 	updatePerson2(person, personUpdate)
 }
 
+
+
+
 // 😐 Better Still
 // - Note the named parameters, but it's still a lot of parameters.
-fun example2_2_BetterStyle() {
+fun example02_2_BetterStyle() {
 	updatePerson(
 		person,
 		updateName = true,
@@ -120,9 +130,12 @@ fun example2_2_BetterStyle() {
 	println(person)
 }
 
+
+
+
 // 😊 Best
 // - Because the `Person` class is a data class, we can use the `copy` method to create a new `Person` with the updated values.
-fun example2_3_BestStyle() {
+fun example02_3_BestStyle() {
 	person = person.copy(name = "Jane Doe")
 
 	println(person)
@@ -130,11 +143,11 @@ fun example2_3_BestStyle() {
 
 
 fun main() {
-	example2_0_BadStyle()
+	example02_0_BadStyle()
 
-	example2_1_ALittleBetter()
+	example02_1_ALittleBetter()
 
-	example2_2_BetterStyle()
+	example02_2_BetterStyle()
 
-	example2_3_BestStyle()
+	example02_3_BestStyle()
 }

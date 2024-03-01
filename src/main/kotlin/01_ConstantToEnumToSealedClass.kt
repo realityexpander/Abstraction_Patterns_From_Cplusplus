@@ -2,13 +2,16 @@
 // - When you have a small number of constants, it's OK to use them directly.
 // - When you have a large number of constants, use an enum or sealed class.
 
-// Before
+
+// 😕 Before
 const val RTB = 1000  // Basic report
 const val RTC = 2001  // customer-requested report
 const val RTBC = 2002  // customer-requested, for a big customer
 //const val RTCC = 2003  // customer-requested, for a cheap customer  // what happens to the `else` branch?
 
-// Better
+
+
+// 😐 Better
 enum class ReportKind1 {
 	Basic,
 	Customer,
@@ -16,7 +19,9 @@ enum class ReportKind1 {
 	//CheapCustomer  // what happens to the `else` branch?
 }
 
-// Best
+
+
+// 😊 Best
 sealed class ReportKind2 {
 	data object Basic : ReportKind2()
 	data object Customer : ReportKind2()
@@ -24,7 +29,7 @@ sealed class ReportKind2 {
 	//data object CheapCustomer : ReportKind2()  // what happens to the `when` expression?
 }
 
-fun constToEnumToSealedClass() {
+fun example01_constToEnumToSealedClass() {
 
 	// 😕 Before
 	// Using constants directly.
@@ -77,5 +82,5 @@ fun constToEnumToSealedClass() {
 
 
 fun main() {
-	constToEnumToSealedClass()
+	example01_constToEnumToSealedClass()
 }

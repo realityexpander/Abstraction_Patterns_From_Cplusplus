@@ -3,31 +3,35 @@
 import java.util.*
 import kotlin.collections.List
 
-// 🟠 Example 11 - Type Switches Instead Of Using Classes
+// 🟠 Example 11 - "Type Switches" Instead Of Using Classes
+
 
 // 😕 Before - 100% Procedural Style
 // - The code uses classes to represent different types.
 // - This is a common pattern in Java & C++ and is pure Procedural style code.
 
+// Create an enum class to represent the different types of reports.
 enum class ReportType {
 	Basic,
 	Customer,
 	BigCustomer
 }
 
+// Create a class to represent the report data.
 data class ReportData(
 	val header: String = "",
 	val isHeaderNeeded: Boolean,
 	val bodyLines: List<String> = emptyList(),
 	val footer: String = "",
 	val isFooterNeeded: Boolean,
-	val reportType: ReportType = ReportType.Basic
+	private val reportType: ReportType = ReportType.Basic
 ) {
 	fun fetchReportType(): ReportType {
 		return reportType
 	}
 }
 
+// Create report data.
 val salesReports = listOf(
 	ReportData(
 		"ReportData 1",
@@ -97,24 +101,22 @@ fun example11_0_BadStyle() {
 			printHeader(report)
 		}
 
-		report.bodyLines.forEach { line ->
-			printBody(report)
-		}
+		printBody(report)
 
 		if(report.isFooterNeeded) {
 			printFooter(report)
 		}
+
+		println() // Add a new line between reports.
 	}
 }
-
-
 
 
 
 // 🙂 Better - COP Style (Class Oriented Programming)
 // - Use class structures & inheritance to represent the different types.
 
-abstract class ReportBase(
+abstract class BaseReport(
 	private val header: String = "",
 	private val bodyLines: List<String> = emptyList(),
 	private val footer: String = "",
@@ -153,7 +155,7 @@ class BasicReport(
 	header: String = "",
 	bodyLines: List<String> = emptyList(),
 	footer: String = "",
-) : ReportBase(header, bodyLines, footer) {
+) : BaseReport(header, bodyLines, footer) {
 
 	override fun isHeaderNeeded(): Boolean {
 		return true
@@ -166,7 +168,7 @@ class BasicReport(
 
 class CustomerReport(
 	bodyLines: List<String> = emptyList(),
-) : ReportBase(bodyLines = bodyLines) {
+) : BaseReport(bodyLines = bodyLines) {
 
 	override fun doLine(line: String) {
 		println("Body: ${line.lowercase()}")
@@ -185,7 +187,7 @@ class BigCustomerReport(
 	header: String = "",
 	bodyLines: List<String> = emptyList(),
 	footer: String = "",
-) : ReportBase(header, bodyLines) {
+) : BaseReport(header, bodyLines) {
 
 	override fun doLine(line: String) {
 		println("Body: ${line.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }}")
@@ -220,10 +222,9 @@ fun example11_1_BetterStyle() {
 	// Generate the reports.
 	salesReports2.forEach { report ->
 		report.generate()
+		println() // Add a new line between reports.
 	}
 }
-
-
 
 
 
@@ -246,7 +247,7 @@ interface CanDoFooter {
 	fun doFooter()
 }
 
-open class Report2Base(
+open class BaseReport2(
 	protected val header: String = "",
 	private val bodyLines: List<String> = emptyList(),
 	protected val footer: String = "",
@@ -267,7 +268,7 @@ class BasicReport2(
 	header: String = "",
 	bodyLines: List<String> = emptyList(),
 	footer: String = "",
-) : Report2Base(header, bodyLines, footer),
+) : BaseReport2(header, bodyLines, footer),
 	CanDoHeader,
 	CanDoFooter
 {
@@ -293,7 +294,7 @@ class BasicReport2(
 
 class CustomerReport2(
 	bodyLines: List<String> = emptyList(),
-) : Report2Base(bodyLines = bodyLines) {
+) : BaseReport2(bodyLines = bodyLines) {
 	override fun doLine(line: String) {
 		println("Body: ${line.lowercase()}")
 	}
@@ -304,10 +305,10 @@ class CustomerReport2(
 	}
 }
 
-class BigCustomerReport2(
+class BigReport2Customer(
 	header: String = "",
 	bodyLines: List<String> = emptyList(),
-) : Report2Base(header, bodyLines),
+) : BaseReport2(header, bodyLines),
 	CanDoHeader
 {
 	override fun doHeader() {
@@ -335,7 +336,7 @@ val salesReports3 = listOf(
 	CustomerReport2(
 		listOf("Line A", "Line B", "Line C"),
 	),
-	BigCustomerReport2(
+	BigReport2Customer(
 		"ReportData for the Big Guy",
 		listOf("Line X", "Line Y", "Line Z"),
 	)
@@ -352,11 +353,14 @@ fun example11_2_BOOPStyle() {
 
 
 fun main() {
-//	example11_0_BadStyle()
-//
-//	example11_1_BetterStyle()
+	example11_0_BadStyle()
+	println() // Add a blank line
+
+	example11_1_BetterStyle()
+	println() // Add a blank line
 
 	example11_2_BOOPStyle()
+	println() // Add a blank line
 }
 
 

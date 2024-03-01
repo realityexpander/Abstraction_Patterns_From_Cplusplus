@@ -4,8 +4,9 @@
 // - This is more common in the wild than one would first assume and comes directly from
 //   the Procedural Programming paradigm.
 
+
 // 😕 Before Example 0
-fun example5_0_BadStyle() {
+fun example05_0_BadStyle() {
 	val employeeName = "John"
 	val employeeAge = 30
 	val employeeSalary = 100_000
@@ -15,68 +16,76 @@ fun example5_0_BadStyle() {
 }
 
 
-
-// 🙂 Better Style Example 1
+// 🙂 Better Example 0
 // - Instead of using multiple variables, use a data class.
 data class Employee(
-	var name: String,
-	var age: Int,
-	var salary: Int,
-	var title: String
+	var name: String = "",
+	var age: Int = 0,
+	var salary: Int = 0,
+	var title: String = ""
 )
 
-fun example5_1_BetterStyle() {
+fun example05_0_BetterStyle() {
 	val employee = Employee("John", 30, 100_000, "Software Engineer")
 
 	println("Name: ${employee.name}, Age: ${employee.age}, Salary: ${employee.salary}, Title: ${employee.title}")
 }
 
 
-// 😕 Before Style Example 2
-fun example5_2_BadStyle() {
 
-	val startVal: Int
-	val endVal: Int
-	val numPoints: Int
-	val avg: Double
-	val tolerance: Double
+// 😕 Before Example 1
+fun example05_1_BadStyle() {
 
-	val lat: Double
-	val lon: Double
-	val isVisible: Boolean
-	val isSecure: Boolean
+	val startVal: Int = 0
+	val endVal: Int = 100
+	val numPoints: Int = 10
+	val avg: Double = 50.0
+	val tolerance: Double = 0.1
+
+	val lat: Double = 37.7749
+	val lon: Double = 122.4194
+	val isVisible: Boolean = true
+	val isSecure: Boolean = false
 
 	// ... more code
+
+	println("startVal: $startVal, endVal: $endVal, numPoints: $numPoints, avg: $avg, tolerance: $tolerance")
 }
 
-// 🙂 Better Style Example 3
+
+// 🙂 Better Example 1
 // - Clumps of variables that are related can be grouped into a data class.
 data class DataPoint(
 	var startVal: Int,
 	var endVal: Int,
 	var numPoints: Int,
 	var avg: Double,
-	var tolerance: Double,
+	var tolerance: Double
 )
 
 data class Position(
-	var lat: Double,
-	var lon: Double,
-	var isVisible: Boolean,
-	var isSecure: Boolean
+	var lat: Double = 0.0,
+	var lon: Double = 0.0,
+	var isVisible: Boolean = false,
+	var isSecure: Boolean = false
 )
 
-fun example5_3_BetterStyle() {
+fun example05_1_BetterStyle() {
 	val dataPoint = DataPoint(0, 100, 10, 50.0, 0.1)
 	val position = Position(37.7749, 122.4194, isVisible=true, isSecure=true)
 
 	// ... more code
+	println("startVal: ${dataPoint.startVal}, endVal: ${dataPoint.endVal}, numPoints: ${dataPoint.numPoints}, avg: ${dataPoint.avg}, tolerance: ${dataPoint.tolerance}")
+	println("lat: ${position.lat}, lon: ${position.lon}, isVisible: ${position.isVisible}, isSecure: ${position.isSecure}")
 }
 
 
 
 fun main() {
-	example5_0_BadStyle()
+	example05_0_BadStyle()
+	example05_0_BetterStyle()
+	println() // Add a blank line
 
-	example5_1_BetterStyle()
+	example05_1_BadStyle()
+	example05_1_BetterStyle()
 }

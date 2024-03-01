@@ -1,11 +1,11 @@
 @file:Suppress("FunctionName", "SpellCheckingInspection")
-// 🟠 Example 9 - Interface Inheritance
+// 🟠 Example 9 - Implementation Inheritance
 // - In general, this is a bad idea as the subclasses can become
 //   tightly coupled to the base class, and difficult to change as time goes on.
 // - But if you need to do it, here's how:
 
-// 😕 Before
-// - 2 different functions used in the same way.
+
+// 😕 Before - Procedural Style with 2 different functions used in the same way.
 
 fun sum(a: Int, b: Int): Int {
 	return a + b
@@ -16,13 +16,12 @@ fun add3(a: Int, b: Int, c: Int): Int {
 }
 
 
-fun example9_0_BadStyle() {
+fun example09_0_BadStyle() {
 	// Two similar functions, used in the same way.
 	println(sum(1, 2))
 
 	println(add3(1, 2, 3))
 }
-
 
 
 
@@ -54,7 +53,7 @@ open class SimpleAdder : Adder() {
 // - https://youtu.be/DSGVejHG8MA
 
 
-fun example9_1_BetterCOPStyle() {
+fun example09_1_BetterCOPStyle() {
 
 	// The `FancyAdder` class uses the common base class `Adder` implementation.
 	val fancyAdder = FancyAdder()
@@ -64,7 +63,6 @@ fun example9_1_BetterCOPStyle() {
 	val simpleAdder = SimpleAdder()
 	println(simpleAdder.add(1, 2))
 }
-
 
 
 
@@ -105,7 +103,7 @@ class SimpleSum(
 	}
 }
 
-fun example9_2_BestBOOPStyle() {
+fun example09_2_BestBOOPStyle() {
 
 	// The `SimpleSum` class uses the common interface `CanSum` implementation.
 	val simpleSum = SimpleSum(1, 2)
@@ -116,7 +114,16 @@ fun example9_2_BestBOOPStyle() {
 	println(fancySum.result())
 }
 
+fun main() {
+	example09_0_BadStyle()
+	println() // Blank line
 
+	example09_1_BetterCOPStyle()
+	println() // Blank line
+
+	example09_2_BestBOOPStyle()
+	println() // Blank line
+}
 
 
 

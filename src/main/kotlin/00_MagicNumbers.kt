@@ -2,7 +2,7 @@ import kotlin.time.Duration.Companion.days
 import kotlin.time.Duration.Companion.seconds
 
 // 🟠 Example 0 - Magic Numbers
-fun magicNumbers() {
+fun example00_magicNumbers() {
 
 	// ⚠️ Don't use magic numbers, use named constants instead.
 	//    - Magic numbers are numbers that appear in code without explanation.
@@ -33,5 +33,5 @@ fun magicNumbers() {
 }
 
 fun main() {
-	magicNumbers()
+	example00_magicNumbers()
 }

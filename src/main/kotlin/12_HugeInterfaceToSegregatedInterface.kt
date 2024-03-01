@@ -18,12 +18,13 @@ interface Text {
 	fun setFont(font: String)
 	fun getText(): String
 	fun setText(text: String)
+	// ... many more methods
 }
 
 
 
-// 🙂 After - Segregated Interface
-// - The interface is now segregated into smaller, more focused interfaces.
+// 🙂 After - "Segregated" Interface
+// - The interface is now split into smaller, more focused interfaces, clearly defining intent.
 
 interface Location {
 	fun getX(): Int
@@ -45,3 +46,6 @@ interface Content {
 	fun getText(): String
 	fun setText(text: String)
 }
+
+
+// NO MAIN FUNCTION NEEDED - JUST ILLUSTRATING THE CODE

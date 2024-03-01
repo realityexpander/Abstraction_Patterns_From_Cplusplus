@@ -2,11 +2,10 @@
 // 🟠 Example 4 - Return Parameters Replaced With A Type
 // - If you have a function that returns multiple parameters, consider returning a data class.
 
-
 // 👎 From C++, writing result values into a class that is passed as a parameter is a common pattern.
 // - This is should be avoided in modern languages. This was a hack in C++ to return multiple values due to language limitations.
 // - In Kotlin, you can return a data class instead of multiple parameters.
-data class OutParams(
+data class OutParams( // Captures the result of a function.
 	var value1: Double,
 	var value2: Double,
 )
@@ -20,7 +19,7 @@ fun calculateCircleStats0(radius: Double, outParams: OutParams) {
 	outParams.value2 = circumference
 }
 
-fun example4_0_CPlusPlusStyle() {
+fun example04_0_CPlusPlusStyle() {
 	val outParams = OutParams(0.0, 0.0)
 	calculateCircleStats0(10.0, outParams)
 
@@ -39,7 +38,7 @@ fun calculateCircleStats1(radius: Double): Triple<Double, Double, Double> {
 	return Triple(area, circumference, diameter)
 }
 
-fun example4_1_BadStyle() {
+fun example04_1_BadStyle() {
 	val (area, circumference, diameter) = calculateCircleStats1(10.0)
 
 	println("Area: $area, Circumference: $circumference, Diameter: $diameter")
@@ -47,7 +46,7 @@ fun example4_1_BadStyle() {
 
 
 
-// 🙂 After
+// 🙂 Better
 // - Instead of returning multiple parameters, return a data class.
 data class CircleStats(
 	var area: Double,
@@ -63,7 +62,7 @@ fun calculateCircleStats2(radius: Double): CircleStats {
 	return CircleStats(area, circumference, diameter)
 }
 
-fun example4_2_GoodStyle() {
+fun example04_2_betterStyle() {
 	val circleStats = calculateCircleStats2(10.0)
 
 	println("Area: ${circleStats.area}, Circumference: ${circleStats.circumference}, Diameter: ${circleStats.diameter}")
@@ -83,7 +82,7 @@ fun divide(a: Double, b: Double): Result<Double> {
 	return Result(a / b, null)
 }
 
-fun example4_3_Optional() {
+fun example04_3_Optional() {
 	val result = divide(10.0, 0.0)
 
 	if (result.error != null) {
@@ -96,13 +95,12 @@ fun example4_3_Optional() {
 
 
 
-
 fun main() {
-	example4_0_CPlusPlusStyle()
+	example04_0_CPlusPlusStyle()
 
-	example4_1_BadStyle()
+	example04_1_BadStyle()
 
-	example4_2_GoodStyle()
+	example04_2_betterStyle()
 
-	example4_3_Optional()
+	example04_3_Optional()
 }
