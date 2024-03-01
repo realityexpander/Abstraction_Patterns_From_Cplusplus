@@ -3,8 +3,6 @@
 import kotlin.time.Duration.Companion.days
 import kotlin.time.Duration.Companion.seconds
 
-const val pi = 3.1415926
-
 // 🟠 Example 0 - Magic Numbers
 fun example00_0_magicNumbers() {
 
@@ -15,7 +13,7 @@ fun example00_0_magicNumbers() {
 
 	// 🙂 After
 	val radius = 5
-	val area2 = pi * radius * radius
+	val area2 = Math.PI * radius * radius
 }
 
 // 🟠 Example 1 - Single Character Variables & Naked 0's & 1's
@@ -41,6 +39,8 @@ fun example00_2_UseStandardLibraries() {
 	// 🙂 After
 	val timeoutDuration = 60.seconds
 	val keepBackupDuration = 7.days
+
+	println("Timeout: $timeoutDuration, Keep Backup: $keepBackupDuration")
 }
 
 fun main() {
