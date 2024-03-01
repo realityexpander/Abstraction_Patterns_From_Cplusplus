@@ -1,4 +1,5 @@
 @file:Suppress("FunctionName", "SpellCheckingInspection")
+
 // 🟠 Example 8 - Hide Complexity Within Classes
 // - Mixing procedural code with object-oriented code can make the code harder to understand and maintain.
 

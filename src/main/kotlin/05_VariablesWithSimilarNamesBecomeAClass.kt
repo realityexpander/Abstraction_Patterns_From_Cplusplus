@@ -1,4 +1,5 @@
 @file:Suppress("FunctionName")
+
 // 🟠 Example 5 - Variable With Similar Names Become A Class
 // - If you have variables with similar names, consider grouping them into a data class.
 // - This is more common in the wild than one would first assume and comes directly from

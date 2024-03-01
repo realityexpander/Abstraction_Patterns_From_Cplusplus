@@ -1,3 +1,5 @@
+@file:Suppress("FunctionName")
+
 // 🟠 Example 1 - Many Constants instead of a Enum or Sealed Class
 // - When you have a small number of constants, it's OK to use them directly.
 // - When you have a large number of constants, use an enum or sealed class.

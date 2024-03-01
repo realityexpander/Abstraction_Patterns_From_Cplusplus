@@ -1,4 +1,5 @@
 @file:Suppress("FunctionName", "SpellCheckingInspection")
+
 // 🟠 Example 10 - Multiple Implementations For Each Type Vs Generics
 
 
@@ -75,7 +76,7 @@ class GenericList<T> {
 	}
 }
 
-fun example10_1_GoodStyle() {
+fun example10_1_BetterStyle() {
 	val intGenericList = GenericList<Int>()  // Use the type "Int" for the generic "T".
 	intGenericList.add(1)
 	intGenericList.add(2)
@@ -97,5 +98,5 @@ fun main() {
 	example10_0_BadStyle()
 	println() // Blank line
 
-	example10_1_GoodStyle()
+	example10_1_BetterStyle()
 }

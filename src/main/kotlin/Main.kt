@@ -3,15 +3,17 @@
  * This is series of examples to show how to use modern Kotlin features to replace old patterns
  * left over from C++ and Java.
  *
- * Based on this talk:
+ * Table of Contents: [Table of Contents](https://github.com/realityexpander/Abstraction_Patterns_From_Cplusplus/blob/main/README.md)
+ *
+ * Based @see [00_MagicNumbers.kt](00_MagicNumbers.kt)
  *
  * Keynote: Abstraction Patterns - Kate Gregory - NDC TechTown 2022
  *
  * [<img src="https://github.com/realityexpander/Abstraction_Patterns_From_Cplusplus/assets/5157474/209b5e87-b698-450f-b999-b2b6c0fd768e" width="100%">]
  * - [https://www.youtube.com/watch?v=rfIX0FzKHF0](https://www.youtube.com/watch?v=rfIX0FzKHF0)
  *
- *  TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
- * click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+ * - TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+ *   click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
  *
  */
 
@@ -51,6 +53,7 @@ fun main() {
 	example09_2_BestBOOPStyle()
 
 	example10_0_BadStyle()
+	example10_1_BetterStyle()
 
 	example11_0_BadStyle()
 	example11_1_BetterStyle()

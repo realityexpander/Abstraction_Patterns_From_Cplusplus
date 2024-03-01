@@ -1,4 +1,5 @@
 @file:Suppress("FunctionName", "SpellCheckingInspection")
+
 // 🟠 Example 6 - One Hundred Lines To A Function
 // - If you have a function becoming larger than a screenful, consider breaking it up into smaller functions.
 

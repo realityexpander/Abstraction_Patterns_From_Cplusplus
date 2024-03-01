@@ -1,3 +1,5 @@
+@file:Suppress("FunctionName")
+
 import kotlin.time.Duration.Companion.days
 import kotlin.time.Duration.Companion.seconds
 

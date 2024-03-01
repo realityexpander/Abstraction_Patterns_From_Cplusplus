@@ -1,4 +1,5 @@
 @file:Suppress("FunctionName", "SpellCheckingInspection")
+
 // 🟠 Example 9 - Implementation Inheritance
 // - In general, this is a bad idea as the subclasses can become
 //   tightly coupled to the base class, and difficult to change as time goes on.
