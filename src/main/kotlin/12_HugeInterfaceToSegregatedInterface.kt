@@ -10,10 +10,12 @@ interface Text {
 	fun getY(): Int
 	fun setX(x: Int)
 	fun setY(y: Int)
+
 	fun getForegroundColor(): Int
 	fun getBackgroundColor(): Int
 	fun setForegroundColor(color: Int)
 	fun setBackgroundColor(color: Int)
+
 	fun getFont(): String
 	fun setFont(font: String)
 	fun getText(): String

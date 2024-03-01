@@ -41,8 +41,8 @@ class FancyAdder : Adder() {
 	}
 }
 
-open class SimpleAdder : Adder() {
-	open fun add(a: Int, b: Int): Int {
+class SimpleAdder : Adder() {
+	fun add(a: Int, b: Int): Int {
 		return super.add(a, b, 0)  // uses the common base class `Adder` implementation.
 	}
 }
