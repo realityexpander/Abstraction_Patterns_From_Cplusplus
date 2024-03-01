@@ -51,6 +51,7 @@ fun example05_1_Before() {
 	// ... more code
 
 	println("startVal: $startVal, endVal: $endVal, numPoints: $numPoints, avg: $avg, tolerance: $tolerance")
+	println("lat: $lat, lon: $lon, isVisible: $isVisible, isSecure: $isSecure")
 }
 
 

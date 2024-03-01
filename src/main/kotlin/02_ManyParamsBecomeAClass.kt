@@ -107,7 +107,15 @@ fun updatePerson2(
 }
 
 fun example02_1_ALittleBetter() {
-	val personUpdate = PersonUpdate(true, false, false, false, false, false, "Jane Doe", 0)
+	val personUpdate = PersonUpdate(
+		true,
+		false,
+		false,
+		false,
+		false,
+		false,
+		"Jane Doe",
+		0)
 	updatePerson2(person, personUpdate)
 }
 
