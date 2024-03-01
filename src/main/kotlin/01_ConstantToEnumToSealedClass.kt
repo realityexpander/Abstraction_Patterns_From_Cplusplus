@@ -11,6 +11,21 @@ const val RTC = 2001  // customer-requested report
 const val RTBC = 2002  // customer-requested, for a big customer
 //const val RTCC = 2003 // customer-requested, for a cheap customer  // What happens to the `else` branch?
 
+// Using constants directly.
+fun example01_0_Before() {
+
+	val reports0 = listOf(RTB, RTC, RTBC)
+	for (report in reports0) {
+		when (report) {
+			RTB -> println("Basic Report")
+			RTC -> println("Customer-requested Report")
+			RTBC -> println("Customer-requested, for a big customer Report")
+			else -> throw IllegalArgumentException("Unknown report type") // Must have an `else` branch. Can break at runtime.
+		}
+	}
+	println() // blank line
+}
+
 
 
 // 😐 Better
@@ -21,39 +36,14 @@ enum class ReportKind1 {
 	//CheapCustomer  // what happens to the `else` branch?
 }
 
-
-
-// 😊 Best
-sealed class ReportKind2 {
-	data object Basic : ReportKind2()
-	data object Customer : ReportKind2()
-	data object BigCustomer : ReportKind2()
-	//data object CheapCustomer : ReportKind2()  // what happens to the `when` expression?
-}
-
-fun example01_constToEnumToSealedClass() {
-
-	// 😕 Before
-	// Using constants directly.
-	val reports0 = listOf(RTB, RTC, RTBC)
-	for(report in reports0) {
-		when (report) {
-			RTB -> println("Basic Report")
-			RTC -> println("Customer-requested Report")
-			RTBC -> println("Customer-requested, for a big customer Report")
-			else -> throw IllegalArgumentException("Unknown report type") // Must have an `else` branch. Can break at runtime.
-		}
-	}
-	println() // blank line
-
-	// 😐 Better
-	// Using an enum. Expects an `else` branch to be present, can cause error at runtime.
+// Using an enum. Expects an `else` branch to be present, can cause error at runtime.
+fun example01_1_Better() {
 	val reports1 = listOf(
 		ReportKind1.Basic,
 		ReportKind1.Customer,
 		ReportKind1.BigCustomer
 	)
-	for(report in reports1) {
+	for (report in reports1) {
 		when (report) {
 			ReportKind1.Basic -> println("Basic Report")
 			ReportKind1.Customer -> println("Customer-requested Report")
@@ -63,9 +53,20 @@ fun example01_constToEnumToSealedClass() {
 		}
 	}
 	println() // blank line
+}
 
-	// 😊 Best
-	// Using a sealed class to enforce exhaustive checks at compile time.
+
+
+// 😊 Best
+// Using a sealed class to enforce exhaustive checks at compile time.
+sealed class ReportKind2 {
+	data object Basic : ReportKind2()
+	data object Customer : ReportKind2()
+	data object BigCustomer : ReportKind2()
+	//data object CheapCustomer : ReportKind2()  // what happens to the `when` expression?
+}
+
+fun example01_2_Best() {
 	val reports2 = listOf(
 		ReportKind2.Basic,
 		ReportKind2.Customer,
@@ -84,5 +85,9 @@ fun example01_constToEnumToSealedClass() {
 
 
 fun main() {
-	example01_constToEnumToSealedClass()
+	example01_0_Before()
+
+	example01_1_Better()
+
+	example01_2_Best()
 }
