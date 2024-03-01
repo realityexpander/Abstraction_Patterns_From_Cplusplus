@@ -6,9 +6,9 @@ import kotlin.time.Duration.Companion.seconds
 // 🟠 Example 0 - Magic Numbers
 fun example00_0_magicNumbers() {
 
+	// 😕 Before
 	// ⚠️ Don't use magic numbers, use named constants instead.
 	//    - Magic numbers are numbers that appear in code without explanation.
-	// 😕 Before
 	val area = 3.14 * 5 * 5
 
 	// 🙂 After
@@ -30,9 +30,10 @@ fun example00_1_singleCharVars() {
 
 // 🟠 Example 2 - Use Standard Libraries
 fun example00_2_UseStandardLibraries() {
+
+	// 😕 Before
 	// ⚠️ Look for standard units of measure in standard libraries, like kotlin's Time class `Duration`
 	//    instead of making your own.
-	// 😕 Before
 	val timeoutSeconds = 60
 	val keepBackupDays = 7
 
