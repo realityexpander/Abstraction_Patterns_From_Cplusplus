@@ -9,7 +9,7 @@
 class Report(
 	val header: String = "",
 	val isHeaderNeeded: Boolean,
-	val bodyLines: List<String>,
+	val bodyLines: kotlin.collections.List<String>,
 	val footer: String = "",
 	val isFooterNeeded: Boolean
 ) {
@@ -74,7 +74,7 @@ class Report2(
 			doHeader()
 		}
 
-		bodyLines.forEach { line ->
+		bodyLines. forEach { line ->
 			doLine(line)
 		}
 
