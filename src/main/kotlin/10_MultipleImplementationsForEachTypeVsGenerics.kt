@@ -40,7 +40,7 @@ class StringList {
 	}
 }
 
-fun example10_0_BadStyle() {
+fun example10_0_Before() {
 	val intList = IntList()
 	intList.add(1)
 	intList.add(2)
@@ -76,7 +76,7 @@ class GenericList<T> {
 	}
 }
 
-fun example10_1_BetterStyle() {
+fun example10_1_Better() {
 	val intGenericList = GenericList<Int>()  // Use the type "Int" for the generic "T".
 	intGenericList.add(1)
 	intGenericList.add(2)
@@ -95,8 +95,8 @@ fun example10_1_BetterStyle() {
 
 
 fun main() {
-	example10_0_BadStyle()
+	example10_0_Before()
 	println() // Blank line
 
-	example10_1_BetterStyle()
+	example10_1_Better()
 }

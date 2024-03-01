@@ -23,37 +23,37 @@ fun main() {
 
 	example02_0_BadStyle()
 	example02_1_ALittleBetter()
-	example02_2_BetterStyle()
-	example02_3_BestStyle()
+	example02_2_Better()
+	example02_3_Best()
 
-	example03_0_BadStyle()
-	example03_1_BetterStyle()
+	example03_0_Before()
+	example03_1_Better()
 
 	example04_0_CPlusPlusStyle()
-	example04_1_BadStyle()
-	example04_2_betterStyle()
+	example04_1_Before()
+	example04_2_Better()
 	example04_3_Optional()
 
-	example05_0_BadStyle()
-	example05_1_BetterStyle()
+	example05_0_Before()
+	example05_1_Better()
 
-	example06_0_BadStyle()
-	example06_1_BetterStyle()
+	example06_0_Before()
+	example06_1_Better()
 
-	example07_0_BadStyle()
-	example07_1_BetterStyle()
+	example07_0_Before()
+	example07_1_Better()
 
-	example08_0_BadStyle()
-	example08_1_BetterStyle()
+	example08_0_Before()
+	example08_1_Better()
 
-	example09_0_BadStyle()
+	example09_0_Before()
 	example09_1_BetterCOPStyle()
 	example09_2_BestBOOPStyle()
 
-	example10_0_BadStyle()
-	example10_1_BetterStyle()
+	example10_0_Before()
+	example10_1_Better()
 
-	example11_0_BadStyle()
-	example11_1_BetterStyle()
+	example11_0_Before()
+	example11_1_BetterCOPStyle()
 
 }

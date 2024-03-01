@@ -5,7 +5,7 @@
 
 // 😕 Before
 // - Functions that are larger than a screenful are hard to understand and maintain.
-fun example06_0_BadStyle() {
+fun example06_0_Before() {
 
 	// Prepare the calculation
 	val x = 100
@@ -52,7 +52,7 @@ fun example06_0_BadStyle() {
 
 // 🙂 After
 // - Break the function into smaller functions.
-fun example06_1_BetterStyle() {
+fun example06_1_Better() {
 	val x = 100
 	val y = 200
 	val z = 300
@@ -113,8 +113,8 @@ fun outputToDatabase(xxxx: Int, yyyy: Int, zzzz: Int): Int {
 
 
 fun main() {
-	example06_0_BadStyle()
+	example06_0_Before()
 	println() // Add a blank line
 
-	example06_1_BetterStyle()
+	example06_1_Better()
 }

@@ -22,7 +22,7 @@ fun drawRect(
 }
 
 // The problem is the call side. It's hard to remember the order and meaning of the parameters.
-fun example03_0_BadStyle() {
+fun example03_0_Before() {
 	drawRect(10, 10, 100, 100, true, "blue", true, "black")
 }
 
@@ -46,7 +46,7 @@ fun drawRect(rect: Rectangle) {
 	println("Fill: ${rect.fill}, Color: ${rect.color}, Border: ${rect.border}, Border Color: ${rect.borderColor}")
 }
 
-fun example03_1_BetterStyle() {
+fun example03_1_Better() {
 
 	// Create a rectangle object.
 	val rect = Rectangle(
@@ -64,6 +64,7 @@ fun example03_1_BetterStyle() {
 }
 
 fun main() {
-	example03_0_BadStyle()
-	example03_1_BetterStyle()
+	example03_0_Before()
+
+	example03_1_Better()
 }

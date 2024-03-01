@@ -7,7 +7,7 @@
 
 
 // 😕 Before Example 0
-fun example05_0_BadStyle() {
+fun example05_0_Before() {
 	val employeeName = "John"
 	val employeeAge = 30
 	val employeeSalary = 100_000
@@ -26,7 +26,7 @@ data class Employee(
 	var title: String = ""
 )
 
-fun example05_0_BetterStyle() {
+fun example05_0_Better() {
 	val employee = Employee("John", 30, 100_000, "Software Engineer")
 
 	println("Name: ${employee.name}, Age: ${employee.age}, Salary: ${employee.salary}, Title: ${employee.title}")
@@ -35,7 +35,7 @@ fun example05_0_BetterStyle() {
 
 
 // 😕 Before Example 1
-fun example05_1_BadStyle() {
+fun example05_1_Before() {
 
 	val startVal: Int = 0
 	val endVal: Int = 100
@@ -71,7 +71,7 @@ data class Position(
 	var isSecure: Boolean = false
 )
 
-fun example05_1_BetterStyle() {
+fun example05_1_Better() {
 	val dataPoint = DataPoint(0, 100, 10, 50.0, 0.1)
 	val position = Position(37.7749, 122.4194, isVisible=true, isSecure=true)
 
@@ -83,10 +83,10 @@ fun example05_1_BetterStyle() {
 
 
 fun main() {
-	example05_0_BadStyle()
-	example05_0_BetterStyle()
+	example05_0_Before()
+	example05_0_Better()
 	println() // Add a blank line
 
-	example05_1_BadStyle()
-	example05_1_BetterStyle()
+	example05_1_Before()
+	example05_1_Better()
 }

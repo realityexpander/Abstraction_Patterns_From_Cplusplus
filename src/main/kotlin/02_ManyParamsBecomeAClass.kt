@@ -116,7 +116,7 @@ fun example02_1_ALittleBetter() {
 
 // 😐 Better Still
 // - Note the named parameters, but it's still a lot of parameters.
-fun example02_2_BetterStyle() {
+fun example02_2_Better() {
 	updatePerson(
 		person,
 		updateName = true,
@@ -136,7 +136,7 @@ fun example02_2_BetterStyle() {
 
 // 😊 Best
 // - Because the `Person` class is a data class, we can use the `copy` method to create a new `Person` with the updated values.
-fun example02_3_BestStyle() {
+fun example02_3_Best() {
 	person = person.copy(name = "Jane Doe")
 
 	println(person)
@@ -148,7 +148,7 @@ fun main() {
 
 	example02_1_ALittleBetter()
 
-	example02_2_BetterStyle()
+	example02_2_Better()
 
-	example02_3_BestStyle()
+	example02_3_Best()
 }

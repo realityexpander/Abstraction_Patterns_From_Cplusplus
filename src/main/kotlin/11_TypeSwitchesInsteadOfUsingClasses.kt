@@ -94,7 +94,7 @@ fun printFooter(report: ReportData) {
 	}
 }
 
-fun example11_0_BadStyle() {
+fun example11_0_Before() {
 	// Generate the reports.
 	salesReports.forEach { report ->
 		if(report.isHeaderNeeded) {
@@ -218,7 +218,7 @@ val salesReports2 = listOf(
 	)
 )
 
-fun example11_1_BetterStyle() {
+fun example11_1_BetterCOPStyle() {
 	// Generate the reports.
 	salesReports2.forEach { report ->
 		report.generate()
@@ -342,7 +342,7 @@ val salesReports3 = listOf(
 	)
 )
 
-fun example11_2_BOOPStyle() {
+fun example11_2_BetterBOOPStyle() {
 
 	// Generate the reports.
 	salesReports3.forEach { report ->
@@ -353,13 +353,13 @@ fun example11_2_BOOPStyle() {
 
 
 fun main() {
-	example11_0_BadStyle()
+	example11_0_Before()
 	println() // Add a blank line
 
-	example11_1_BetterStyle()
+	example11_1_BetterCOPStyle()
 	println() // Add a blank line
 
-	example11_2_BOOPStyle()
+	example11_2_BetterBOOPStyle()
 	println() // Add a blank line
 }
 

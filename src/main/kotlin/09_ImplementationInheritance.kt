@@ -17,7 +17,7 @@ fun add3(a: Int, b: Int, c: Int): Int {
 }
 
 
-fun example09_0_BadStyle() {
+fun example09_0_Before() {
 	// Two similar functions, used in the same way.
 	println(sum(1, 2))
 
@@ -116,7 +116,7 @@ fun example09_2_BestBOOPStyle() {
 }
 
 fun main() {
-	example09_0_BadStyle()
+	example09_0_Before()
 	println() // Blank line
 
 	example09_1_BetterCOPStyle()

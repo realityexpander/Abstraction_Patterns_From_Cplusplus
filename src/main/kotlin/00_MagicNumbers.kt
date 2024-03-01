@@ -17,12 +17,14 @@ fun example00_magicNumbers() {
 	val area2 = pi * radius * radius
 
 
+
 	// 🙂👍 OK to use 0 or 1 as a naked value, when it's used as an initial value or a loop counter.
 	// 🙂👍 OK to use single char `i` as a loop counter or index, the fact that its a single letter is a
 	//      clue to the reader that it's not important.
 	for(i in 1..10) {
 		println(i)
 	}
+
 
 
 	// ⚠️ Look for standard units of measure in standard libraries, like kotlin's Time class `Duration`

@@ -6,7 +6,7 @@
 
 // 😕 Before
 // - Functions that are larger than a screenful are hard to understand and maintain.
-fun example07_0_BadStyle() {
+fun example07_0_Before() {
 	val x = 100
 	val y = 200
 	val z = 300
@@ -123,7 +123,7 @@ fun importData(xx: Int, yy: Int, zz: Int, xyz: Boolean): Int {
 	return 0
 }
 
-fun example07_1_BetterStyle() {
+fun example07_1_Better() {
 	val x = 100
 	val y = 200
 	val z = 300
@@ -141,10 +141,10 @@ fun example07_1_BetterStyle() {
 
 
 fun main() {
-	example07_0_BadStyle()
+	example07_0_Before()
 	println() // Add a blank line
 
-	example07_1_BetterStyle()
+	example07_1_Better()
 }
 
 

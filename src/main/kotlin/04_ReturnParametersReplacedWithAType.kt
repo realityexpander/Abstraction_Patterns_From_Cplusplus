@@ -39,7 +39,7 @@ fun calculateCircleStats1(radius: Double): Triple<Double, Double, Double> {
 	return Triple(area, circumference, diameter)
 }
 
-fun example04_1_BadStyle() {
+fun example04_1_Before() {
 	val (area, circumference, diameter) = calculateCircleStats1(10.0)
 
 	println("Area: $area, Circumference: $circumference, Diameter: $diameter")
@@ -63,7 +63,7 @@ fun calculateCircleStats2(radius: Double): CircleStats {
 	return CircleStats(area, circumference, diameter)
 }
 
-fun example04_2_betterStyle() {
+fun example04_2_Better() {
 	val circleStats = calculateCircleStats2(10.0)
 
 	println("Area: ${circleStats.area}, Circumference: ${circleStats.circumference}, Diameter: ${circleStats.diameter}")
@@ -99,9 +99,9 @@ fun example04_3_Optional() {
 fun main() {
 	example04_0_CPlusPlusStyle()
 
-	example04_1_BadStyle()
+	example04_1_Before()
 
-	example04_2_betterStyle()
+	example04_2_Better()
 
 	example04_3_Optional()
 }

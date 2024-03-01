@@ -43,7 +43,7 @@ val reports = listOf(
 )
 
 // Create a function to generate the report.
-fun example08_0_BadStyle() {
+fun example08_0_Before() {
 	// Generate the reports.
 	reports.forEach { report ->
 		if(report.isHeaderNeeded) {  // <-- Procedural style code, why not encapsulate this in the class?
@@ -118,7 +118,7 @@ val reports2 = listOf(
 	)
 )
 
-fun example08_1_BetterStyle() {
+fun example08_1_Better() {
 	// Generate the reports but still using procedural style.
 	reports2.forEach { report ->
 		report.doHeader()
@@ -135,10 +135,10 @@ fun example08_1_BetterStyle() {
 
 
 fun main() {
-	example08_0_BadStyle()
+	example08_0_Before()
 	println() // Add a blank line
 
-	example08_1_BetterStyle()
+	example08_1_Better()
 }
 
 
