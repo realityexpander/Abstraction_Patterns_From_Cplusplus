@@ -12,8 +12,9 @@ Table of Contents of Examples:
 - [07-Comments on Close Brackets](src/main/kotlin/07_CommentsOnCloseBrackets.kt)
 - [08-Hide Complexity Within Classes](src/main/kotlin/08_HideComplexityWithinClasses.kt)
 - [09-Implementation Inheritance](src/main/kotlin/09_ImplementationInheritance.kt)
-- [10-"Type Switches" Become Classes](src/main/kotlin/10_MultipleImplementationsForEachTypeVsGenerics.kt)
-- [11-Huge Interfaces Become Segregated Interfaces](src/main/kotlin/11_TypeSwitchesInsteadOfUsingClasses.kt)
+- [10-Multiple Implementations For Each Type Vs Generics](src/main/kotlin/10_MultipleImplementationsForEachTypeVsGenerics.kt)
+- [11-"Type Switches" Become Classes](src/main/kotlin/10_MultipleImplementationsForEachTypeVsGenerics.kt)
+- [12-Huge Interfaces Become Segregated Interfaces](src/main/kotlin/11_TypeSwitchesInsteadOfUsingClasses.kt)
 
 Based on this talk:
 
