@@ -17,7 +17,7 @@
 
 
 fun main() {
-	example00_magicNumbers()
+	example00_0_magicNumbers()
 
 	example01_constToEnumToSealedClass()
 
