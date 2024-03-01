@@ -8,10 +8,10 @@ fun example00_magicNumbers() {
 
 	// ⚠️ Don't use magic numbers, use named constants instead.
 	//    - Magic numbers are numbers that appear in code without explanation.
-	// Before
+	// 😕 Before
 	val area = 3.14 * 5 * 5
 
-	// After
+	// 🙂 After
 	val pi = 3.14
 	val radius = 5
 	val area2 = pi * radius * radius
@@ -27,11 +27,11 @@ fun example00_magicNumbers() {
 
 	// ⚠️ Look for standard units of measure in standard libraries, like kotlin's Time class `Duration`
 	//    instead of making your own.
-	// Before
+	// 😕 Before
 	val timeoutSeconds = 60
 	val keepBackupDays = 7
 
-	// After
+	// 🙂 After
 	val timeoutDuration = 60.seconds
 	val keepBackupDuration = 7.days
 }
