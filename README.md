@@ -23,6 +23,14 @@ Based on this talk:
 
 [<img src="https://github.com/realityexpander/Abstraction_Patterns_From_Cplusplus/assets/5157474/209b5e87-b698-450f-b999-b2b6c0fd768e">](https://www.youtube.com/watch?v=rfIX0FzKHF0)
 
+# How To Install and Run The Samples In This Guide
+  - [Install IntelliJ IDEA Community Edition](https://www.jetbrains.com/idea/download/)
+  - [How to clone this Project from Github to your local machine](https://www.jetbrains.com/guide/java/tips/clone-project-from-github/#:~:text=Clone%20a%20project%20from%20the%20IntelliJ%20IDEA%20welcome%20screen&text=Click%20Get%20from%20VCS%2C%20specify,into%20an%20IntelliJ%20IDEA%20project.)
+  - Navigate to this `README.md` file in the project and click on the links to the live sample code.
+  - In the left-hand gutter, click on the green arrow to run the sample code.
+    
+    [<img src="assets/click-green-arrow.png">]()
+
 ## My Free Course: "How To Program From The Ground Up"
 
 Check out my free course on YouTube: ["How to Program from the Ground Up"](https://www.youtube.com/playlist?list=PLzUxWOrVXB4QHsURai1GmmhmqAUVNbfno)
@@ -31,11 +39,3 @@ Free follow along document: ["How to Program From The Ground Up Follow Along Gui
 
 [<img src="assets/how-to-program.png">](https://www.youtube.com/playlist?list=PLzUxWOrVXB4QHsURai1GmmhmqAUVNbfno)
 
-
-# How To Install and Run The Samples In This Guide
-  - [Install IntelliJ IDEA Community Edition](https://www.jetbrains.com/idea/download/)
-  - [How to clone this Project from Github to your local machine](https://www.jetbrains.com/guide/java/tips/clone-project-from-github/#:~:text=Clone%20a%20project%20from%20the%20IntelliJ%20IDEA%20welcome%20screen&text=Click%20Get%20from%20VCS%2C%20specify,into%20an%20IntelliJ%20IDEA%20project.)
-  - Navigate to this `README.md` file in the project and click on the links to the live sample code.
-  - In the left-hand gutter, click on the green arrow to run the sample code.
-    
-    [<img src="assets/click-green-arrow.png">]()
