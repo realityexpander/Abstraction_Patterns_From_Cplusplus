@@ -1,4 +1,4 @@
-// 🟠 Example 12 - Huge Interface To Segregated Interface
+// 🟠 Example 12 - Huge Interface To Segregated Interfaces
 // - Large number of definitions in a single interface makes the intent of the interface unclear.
 // - "Segregate" (separate) the interface into smaller, more focused interfaces.
 
