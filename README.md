@@ -1,5 +1,7 @@
-Click for my explainer Video on YouTube:
+### Click for my explainer Video on YouTube:
 [<img src="https://github.com/realityexpander/Abstraction_Patterns_From_Cplusplus/assets/5157474/ec2b62d1-15a9-4070-9f2f-e5d9b0a44511">](https://youtu.be/3pRwlcSK1A0)
+
+# HER TALK SHOULD HAVE BEEN CALLED "REFACTORING STRATEGIES FROM C++"
 
 Table of Contents of Examples:
 
