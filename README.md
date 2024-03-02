@@ -23,8 +23,11 @@ Based on this talk:
 
 [<img src="https://github.com/realityexpander/Abstraction_Patterns_From_Cplusplus/assets/5157474/209b5e87-b698-450f-b999-b2b6c0fd768e">](https://www.youtube.com/watch?v=rfIX0FzKHF0)
 
+## My Free Course: "How To Program From The Ground Up"
 
 Check out my free course on YouTube: ["How to Program from the Ground Up"](https://www.youtube.com/playlist?list=PLzUxWOrVXB4QHsURai1GmmhmqAUVNbfno)
+
+Free follow along document: ["How to Program From The Ground Up Follow Along Guide"](https://github.com/realityexpander/How_to_program_from_ground_up)
 
 [<img src="assets/how-to-program.png">](https://www.youtube.com/playlist?list=PLzUxWOrVXB4QHsURai1GmmhmqAUVNbfno)
 
