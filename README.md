@@ -15,7 +15,7 @@ Table of Contents of Examples:
 - [09-Implementation Inheritance](src/main/kotlin/09_ImplementationInheritance.kt)
 - [10-Multiple Implementations For Each Type Vs Generics](src/main/kotlin/10_MultipleImplementationsForEachTypeVsGenerics.kt)
 - [11-"Type Switches" Become Classes](src/main/kotlin/11_TypeSwitchesInsteadOfUsingClasses.kt)
-- [12-Huge Interfaces Become Segregated Interfaces](src/main/kotlin/12_Huge.kt)
+- [12-Huge Interfaces Become Segregated Interfaces](src/main/kotlin/12_HugeInterfaceToSegregatedInterface.kt)
 
 Based on this talk:
 
