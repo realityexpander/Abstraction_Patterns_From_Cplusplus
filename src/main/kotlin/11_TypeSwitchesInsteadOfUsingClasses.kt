@@ -3,7 +3,7 @@
 import java.util.*
 import kotlin.collections.List
 
-// 🟠 Example 11 - "Type Switches" Instead Of Using Classes
+// 🟠 Example 11 - "Type Switches" into Classes
 
 
 // 😕 Before - 100% Procedural Style
