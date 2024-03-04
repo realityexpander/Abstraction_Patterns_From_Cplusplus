@@ -79,7 +79,7 @@ interface CanSum {
 }
 
 interface HasIntegerResult {
-	fun result(): Int  // Anyone implementing this interface must provide an integer result.
+	fun result(): Int  // Any class implementing this interface must provide an integer result.
 }
 
 // - Create a class that implements the interface.
@@ -90,7 +90,7 @@ class FancySum(
 ) : CanSum, HasIntegerResult {
 
 	override fun result(): Int {
-		return sum(a, b, c)
+		return sum(this.a, this.b, this.c)  // uses implementation from the CanSum interface.
 	}
 }
 
@@ -100,7 +100,7 @@ class SimpleSum(
 ) : CanSum, HasIntegerResult {
 
 	override fun result(): Int {
-		return sum(a, b, 0)
+		return sum(this.a, this.b, 0)   // uses implementation from the CanSum interface.
 	}
 }
 
