@@ -6,17 +6,17 @@
 Table of Contents of Examples:
 
 - [00-Magic Numbers](./src/main/kotlin/00_MagicNumbers.kt)
-- [01-Constants To Enums to Sealed Classes](./src/main/kotlin/01_ConstantToEnumToSealedClass.kt)
-- [02-Many Parameters Become a Class](src/main/kotlin/02_ManyParamsBecomeAClass.kt)
-- [03-Fix Deceptive Parameter Lists](src/main/kotlin/03_FixDeceptiveParameterLists.kt)
+- [01-Constants into Enums into Sealed Classes](./src/main/kotlin/01_ConstantToEnumToSealedClass.kt)
+- [02-Many Parameters into a Class](src/main/kotlin/02_ManyParamsBecomeAClass.kt)
+- [03-Deceptive Parameter Lists into Named Parameters](src/main/kotlin/03_FixDeceptiveParameterLists.kt)
 - [04-Return Parameters Become a Type](src/main/kotlin/04_ReturnParametersReplacedWithAType.kt)
 - [05-Variables With Similar Names Become a Class](src/main/kotlin/05_VariablesWithSimilarNamesBecomeAClass.kt)
 - [06-One hundred+ lines Become a Function](src/main/kotlin/06_OneHundredLinesToAFunction.kt)
-- [07-Comments on Close Brackets](src/main/kotlin/07_CommentsOnCloseBrackets.kt)
+- [07-Comments on Close Brackets into Functions](src/main/kotlin/07_CommentsOnCloseBrackets.kt)
 - [08-Hide Complexity Within Classes](src/main/kotlin/08_HideComplexityWithinClasses.kt)
-- [09-Implementation Inheritance](src/main/kotlin/09_ImplementationInheritance.kt)
-- [10-Multiple Implementations For Each Type Vs Generics](src/main/kotlin/10_MultipleImplementationsForEachTypeVsGenerics.kt)
-- [11-"Type Switches" Become Classes](src/main/kotlin/11_TypeSwitchesInsteadOfUsingClasses.kt)
+- [09-Implementation Inheritance is Dangerous](src/main/kotlin/09_ImplementationInheritance.kt)
+- [10-Multiple Implementations For Each Type into Generics](src/main/kotlin/10_MultipleImplementationsForEachTypeVsGenerics.kt)
+- [11-"Type Switches" into Classes](src/main/kotlin/11_TypeSwitchesInsteadOfUsingClasses.kt)
 - [12-Huge Interfaces Become Segregated Interfaces](src/main/kotlin/12_HugeInterfaceToSegregatedInterface.kt)
 
 Based on this talk:
