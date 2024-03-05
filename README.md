@@ -39,5 +39,5 @@ Free follow along document: ["How to Program From The Ground Up Follow Along Gui
 
 [<img src="assets/how-to-program.png">](https://www.youtube.com/playlist?list=PLzUxWOrVXB4QHsURai1GmmhmqAUVNbfno)
 
-![Profile Views](https://komarev.com/ghpvc/?username=Abstraction_Patterns_From_Cplusplus)
+![Profile Views](https://komarev.com/ghpvc/?username=RealityExpanderAbstractionPatternsFromCplusplus)
 
